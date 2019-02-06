@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Ore processing</name>
+	<author>WolfgangPolska</author>
+	<url>wp.pl</url>
+	<targetVersion>1.0.2024</targetVersion>
+	<description>
+	Add solution for both, tribal and industrial colonies to deal with metal shortages on plains, or when metal deposits run out.
+	</description>
+</ModMetaData>

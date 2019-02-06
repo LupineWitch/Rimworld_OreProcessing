@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+
+<Defs>
+  
+  <WorkGiverDef>
+    <defName>OreMod_Nodemining</defName>
+    <label>mine ore</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Mining</workType>
+    <priorityInType>30</priorityInType>
+    <fixedBillGiverDefs>
+	<li>MiningPlatform</li>
+    </fixedBillGiverDefs>	
+    <verb>Mine</verb>
+    <gerund>Mining</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>	
+  </WorkGiverDef>  
+  
+    <WorkGiverDef>
+    <defName>DoBillsFueledSmelter</defName>
+    <label>smelt items</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+      <li>FueledSmelter</li>
+	  <li>PrimitiveSmelter</li>
+    </fixedBillGiverDefs>
+    <verb>Smelt</verb>
+    <gerund>Smelting at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+ </Defs>
