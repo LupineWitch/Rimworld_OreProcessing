@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Ore processing</name>
+	<author>WolfgangPolska</author>
+	<url>https://ludeon.com/forums/index.php?topic=47313.msg448125#msg448125</url>
+	<targetVersion>1.0.2150</targetVersion>
+	<description>
+	Add solution for both, tribal and industrial colonies to deal with metal shortages on plains, or when metal deposits run out. Also, ores have to be smelted now. Enjoy!
+	</description>
+</ModMetaData>

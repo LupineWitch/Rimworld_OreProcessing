@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+    <ThingDef ParentName="BuildingNaturalBase">
+        <defName>ResourceHole</defName>
+        <label>Mining hole</label>
+        <description>A mining hole.</description>
+        <thingClass>Thing</thingClass>
+        <category>Ethereal</category>
+        <graphicData>
+            <texPath>Things/Buildings/MineHole</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <altitudeLayer>Floor</altitudeLayer>
+        <destroyable>false</destroyable>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Never</tickerType>
+		<scatterableOnMapGen>true</scatterableOnMapGen>
+        <selectable>true</selectable>
+        <size>(3,3)</size>
+        <neverOverlapFloors>true</neverOverlapFloors>
+        <blockPlants>true</blockPlants>
+    </ThingDef>
+
+
+
+   <ThingCategoryDef>
+    <defName>OreChunks</defName>
+    <label>Resource containing chunks</label>
+    <parent>Chunks</parent>
+  </ThingCategoryDef>
+ 
+ <ThingDef ParentName="ChunkBase">
+    <defName>ChunkIronOre</defName>
+    <label>iron ore chunk</label>
+    <description>A chunk of iron ore. It's useless in its current form, it can be smelted to aquire puryfied ore.</description>
+    <graphicData>
+      <texPath>orechunks/iron_chunk</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>17</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>OreChunks</li>
+    </thingCategories>
+    <smeltProducts>
+      <Steel>20</Steel>
+    </smeltProducts>
+</ThingDef>
+
+ <ThingDef ParentName="ChunkBase">
+    <defName>ChunkGoldOre</defName>
+    <label>gold ore chunk</label>
+    <description>A chunk of gold containing ore. It's useless in its current form, however it can be smelted to aquire puryfied resource.</description>
+    <graphicData>
+      <texPath>orechunks/gold_chunk</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>2.5</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>OreChunks</li>
+    </thingCategories>
+    <smeltProducts>
+      <Gold>10</Gold>
+    </smeltProducts>
+</ThingDef>
+
+ <ThingDef ParentName="ChunkBase">
+    <defName>ChunkSilverOre</defName>
+    <label>silver ore chunk</label>
+    <description>A chunk, containing silver ore. It's useless in its current form, it can be smelted to aquire resource .</description>
+    <graphicData>
+      <texPath>orechunks/silver_chunk</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>3.5</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>OreChunks</li>
+    </thingCategories>
+    <smeltProducts>
+      <Silver>20</Silver>
+    </smeltProducts>
+</ThingDef>
+
+ <ThingDef ParentName="ChunkBase">
+    <defName>ChunkPlasteelOre</defName>
+    <label>plasteel ore chunk</label>
+    <description>Not really an ore, the remains of ancient structure compressed by elements. They need to be purified and reshaped to be usable.</description>
+    <graphicData>
+      <texPath>orechunks/plasteel_chunk</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>25</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>OreChunks</li>
+    </thingCategories>
+    <smeltProducts>
+      <Plasteel>20</Plasteel>
+    </smeltProducts>
+</ThingDef>
+
+ <ThingDef ParentName="ChunkBase">
+    <defName>ChunkUraniumOre</defName>
+    <label>uranium ore chunk</label>
+    <description>A chunk of uranium ore. It contains miniscule amount of resource, and it needs pulverized, refined with acid, then smelted into usable form.</description>
+    <graphicData>
+      <texPath>orechunks/uranium_chunk</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>OreChunks</li>
+    </thingCategories>
+    <smeltProducts>
+      <Uranium>20</Uranium>
+    </smeltProducts>
+</ThingDef>
+
+
+
+</Defs>

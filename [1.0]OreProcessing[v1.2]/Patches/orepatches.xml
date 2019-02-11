@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/ThingDef[defName = "MineableSteel"]/building</xpath>
+    <value>
+      <building>
+        <isResourceRock>true</isResourceRock>
+        <mineableThing>ChunkIronOre</mineableThing>
+        <mineableYield>1</mineableYield>
+        <mineableScatterCommonality>1</mineableScatterCommonality>
+        <mineableScatterLumpSizeRange>
+          <min>1</min>
+          <max>1</max>
+        </mineableScatterLumpSizeRange>	
+      </building>
+    </value>
+  </Operation>
+  
+    <Operation Class="PatchOperationReplace">
+    <xpath>*/ThingDef[defName = "MineableGold"]/building</xpath>
+    <value>
+      <building>
+        <isResourceRock>true</isResourceRock>
+        <mineableThing>ChunkGoldOre</mineableThing>
+        <mineableYield>1</mineableYield>
+        <mineableScatterCommonality>1</mineableScatterCommonality>
+        <mineableScatterLumpSizeRange>
+          <min>1</min>
+          <max>1</max>
+        </mineableScatterLumpSizeRange>	
+      </building>
+    </value>
+  </Operation>
+  
+  
+    <Operation Class="PatchOperationReplace">
+    <xpath>*/ThingDef[defName = "MineableSilver"]/building</xpath>
+    <value>
+      <building>
+        <isResourceRock>true</isResourceRock>
+        <mineableThing>ChunkSilverOre</mineableThing>
+        <mineableYield>1</mineableYield>
+        <mineableScatterCommonality>1</mineableScatterCommonality>
+        <mineableScatterLumpSizeRange>
+          <min>1</min>
+          <max>1</max>
+        </mineableScatterLumpSizeRange>	
+      </building>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/ThingDef[defName = "MineablePlasteel"]/building</xpath>
+    <value>
+      <building>
+        <isResourceRock>true</isResourceRock>
+        <mineableThing>ChunkPlasteelOre</mineableThing>
+        <mineableYield>1</mineableYield>
+        <mineableScatterCommonality>1</mineableScatterCommonality>
+        <mineableScatterLumpSizeRange>
+          <min>1</min>
+          <max>1</max>
+        </mineableScatterLumpSizeRange>	
+      </building>
+    </value>
+  </Operation> 
+  
+  <Operation Class="PatchOperationReplace">
+  <xpath>*/ThingDef[defName = "MineableUranium"]/building</xpath>
+    <value>
+      <building>
+        <isResourceRock>true</isResourceRock>
+        <mineableThing>ChunkUraniumOre</mineableThing>
+        <mineableYield>1</mineableYield>
+        <mineableScatterCommonality>1</mineableScatterCommonality>
+        <mineableScatterLumpSizeRange>
+          <min>1</min>
+          <max>1</max>
+        </mineableScatterLumpSizeRange>	
+      </building>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/ThingDef[defName = "ElectricSmelter"]/recipes</xpath>
+    <value>
+      <li>SmeltIronOreChunkE</li>				
+      <li>SmeltUraniumOreChunkE</li>			
+      <li>SmeltPlasteelOreChunkE</li>			
+    </value>
+	
+  </Operation>  
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/ThingDef[defName = "ElectricSmelter"]/researchPrerequisites</xpath>
+    <value>
+	<li>ElectricSmelting</li>
+    </value>
+	
+  </Operation>
+  
+  	<Operation Class="PatchOperationAdd">
+		<xpath>*/MapGeneratorDef[@Name = "MapCommonBase"]/genSteps</xpath>
+		<value><li>MiningNodes</li></value>
+	</Operation> 
+  
+  
+
+</Patch>

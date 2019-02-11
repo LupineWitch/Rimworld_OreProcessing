@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CoalOre</defName>
+    <label>Coal</label>
+    <description>Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source.</description>
+    <graphicData>
+      <texPath>resources/coal</texPath>
+       <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>	  
+      <Mass>0.5</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+	  <Beauty>-10</Beauty>	  
+      <Flammability>1.0</Flammability>	  
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+	</ThingDef>
+	
+	
+	  <ThingDef ParentName="ResourceBase">
+    <defName>AdobeRaw</defName>
+    <label>raw adobe bricks</label>
+    <description>Simple bricks, made out of clay nad mud. They need to be dried in heat, pririor to being used.</description>
+    <graphicData>
+      <texPath>resources/AdobeRaw</texPath>
+       <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.01</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>	  
+      <Mass>1.0</Mass>
+      <DeteriorationRate>0</DeteriorationRate>
+	  <Beauty>-10</Beauty>	  
+      <Flammability>0.2</Flammability>	  
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+	</ThingDef>
+	
+	
+	  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksAdobe</defName>
+    <label>adobe bricks</label>
+    <description>Blocks of hardened clay with hay. Suitable as building material.</description>
+    <graphicData>
+      <color>(144,108,63)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(144,108,63)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>adobe</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>  
+        <MaxHitPoints>1.4</MaxHitPoints>
+		<WorkToBuild>2.0</WorkToBuild>
+		<WorkToMake>1.8</WorkToMake>
+		<Flammability>0.2</Flammability>	
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+	
+	
+	
+	
+</Defs>

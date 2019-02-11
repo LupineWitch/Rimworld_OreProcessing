@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+		<ThingDef ParentName="BuildingBase">
+		<defName>DryingSpot</defName>
+		<label>Drying rack</label>
+		<thingClass>oreprocessing.DryingSpot</thingClass>
+		<description>A rack to place your raw brick to let them harden. They need at least 3 days to become usable</description>
+		<graphicData>
+			<texPath>Things/Buildings/DryingRack</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<blockLight>false</blockLight>
+		<placingDraggableDimensions>2</placingDraggableDimensions>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToBuild>125</WorkToBuild>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<constructEffect>ConstructWood</constructEffect>
+		<costList>
+			<WoodLog>3</WoodLog>
+			<AdobeRaw>9</AdobeRaw>
+		</costList>
+		<useHitPoints>true</useHitPoints>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="oreprocessing.CompProperties_DryingSpot">
+				<dryingTicks>720</dryingTicks>
+				<efekt>AdobeBlocks</efekt>
+			</li>
+		</comps>
+		<pathCost>60</pathCost>
+	</ThingDef>
+
+
+
+</Defs>

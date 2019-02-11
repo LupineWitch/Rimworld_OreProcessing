@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+<RecipeDef>
+
+ <defName>MineIronOre</defName>
+    <label>mine iron ore</label>
+    <description>I really have no idea how to better describe it.</description>
+    <jobString>Mining iron ore</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>MiningSpeed</workSpeedStat>
+	<workSkill>Mining</workSkill>
+		<effectWorking>Mine</effectWorking>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+    <products>
+     <ChunkIronOre>1</ChunkIronOre>
+    </products>
+	      <skillRequirements>
+			<Mining>3</Mining>
+    </skillRequirements>
+  </RecipeDef>
+
+<RecipeDef>
+   <defName>MineSilverOre</defName>
+    <label>mine silver ore</label>
+    <description>I really have no idea how to better describe it.</description>
+    <jobString>Mining silver ore</jobString>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>MiningSpeed</workSpeedStat>
+	<workSkill>Mining</workSkill>
+	<effectWorking>Mine</effectWorking>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+    <products>
+     <ChunkSilverOre>1</ChunkSilverOre>
+    </products>
+	    <skillRequirements>
+			<Mining>8</Mining>
+    </skillRequirements>
+  </RecipeDef>
+  
+  
+<RecipeDef>
+   <defName>MineCoalOre</defName>
+    <label>mine coal</label>
+    <description>I really have no idea how to better describe it.</description>
+    <jobString>Mining coal</jobString>
+    <workAmount>1800</workAmount>
+    <workSpeedStat>MiningSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+    <products>
+     <CoalOre>25</CoalOre>
+    </products>
+	      <skillRequirements>
+			<Mining>1</Mining>
+    </skillRequirements>
+  </RecipeDef>
+
+<RecipeDef>
+   <defName>MineGoldOre</defName>
+    <label>mine gold ore</label>
+    <description>I really have no idea how to better describe it.</description>
+    <jobString>mine gold</jobString>
+    <workAmount>3500</workAmount>
+    <workSpeedStat>MiningSpeed</workSpeedStat>
+		<effectWorking>Mine</effectWorking>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+    <products>
+     <ChunkGoldOre>1</ChunkGoldOre>
+    </products>
+	    <skillRequirements>
+			<Mining>12</Mining>
+    </skillRequirements>
+  </RecipeDef>
+
+<RecipeDef>
+   <defName>MinePlasteelOre</defName>
+    <label>mine plasteel</label>
+    <description>I really have no idea how to better describe it.</description>
+    <jobString>mine plasteel</jobString>
+    <workAmount>3800</workAmount>
+    <workSpeedStat>MiningSpeed</workSpeedStat>
+	<workSkill>Mining</workSkill>
+		<effectWorking>Mine</effectWorking>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+    <products>
+     <ChunkPlasteelOre>1</ChunkPlasteelOre>
+    </products>
+	      <skillRequirements>
+			<Mining>15</Mining>
+    </skillRequirements>
+  </RecipeDef>
+  
+<RecipeDef>
+   <defName>MineUraniumOre</defName>
+    <label>mine uranium</label>
+    <description>I really have no idea how to better describe it.</description>
+    <jobString>mine plasteel</jobString>
+    <workAmount>3800</workAmount>
+    <workSpeedStat>MiningSpeed</workSpeedStat>
+	<workSkill>Mining</workSkill>
+		<effectWorking>Mine</effectWorking>
+	<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+    <products>
+     <ChunkUraniumOre>1</ChunkUraniumOre>
+    </products>
+      <skillRequirements>
+			<Mining>15</Mining>
+    </skillRequirements>
+	  </RecipeDef>
+	
+
+</Defs>
