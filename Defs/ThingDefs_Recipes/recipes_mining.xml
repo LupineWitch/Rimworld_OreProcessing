@@ -16,7 +16,7 @@
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkIronOre>1</ChunkIronOre>
+     <ChunkIronOre>35</ChunkIronOre>
     </products>
 	      <skillRequirements>
 			<Mining>3</Mining>
@@ -35,7 +35,7 @@
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkSilverOre>1</ChunkSilverOre>
+     <ChunkSilverOre>40</ChunkSilverOre>
     </products>
 	    <skillRequirements>
 			<Mining>8</Mining>
@@ -54,7 +54,7 @@
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <CoalOre>25</CoalOre>
+     <CoalOre>50</CoalOre>
     </products>
 	      <skillRequirements>
 			<Mining>1</Mining>
@@ -84,14 +84,14 @@
     <label>mine plasteel</label>
     <description>I really have no idea how to better describe it.</description>
     <jobString>mine plasteel</jobString>
-    <workAmount>3800</workAmount>
+    <workAmount>3000</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
 		<effectWorking>Mine</effectWorking>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkPlasteelOre>1</ChunkPlasteelOre>
+     <ChunkPlasteelOre>15</ChunkPlasteelOre>
     </products>
 	      <skillRequirements>
 			<Mining>15</Mining>
@@ -103,14 +103,14 @@
     <label>mine uranium</label>
     <description>I really have no idea how to better describe it.</description>
     <jobString>mine plasteel</jobString>
-    <workAmount>3800</workAmount>
+    <workAmount>3400</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
 		<effectWorking>Mine</effectWorking>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkUraniumOre>1</ChunkUraniumOre>
+     <ChunkUraniumOre>25</ChunkUraniumOre>
     </products>
       <skillRequirements>
 			<Mining>15</Mining>

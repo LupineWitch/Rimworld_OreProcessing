@@ -9,12 +9,12 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkIronOre</mineableThing>
-        <mineableYield>1</mineableYield>
-        <mineableScatterCommonality>1</mineableScatterCommonality>
-        <mineableScatterLumpSizeRange>
-          <min>1</min>
-          <max>1</max>
-        </mineableScatterLumpSizeRange>	
+        <mineableYield>70</mineableYield>
+		<mineableScatterCommonality>1</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>30</min>
+        <max>40</max>
+      </mineableScatterLumpSizeRange>
       </building>
     </value>
   </Operation>
@@ -25,12 +25,12 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkGoldOre</mineableThing>
-        <mineableYield>1</mineableYield>
-        <mineableScatterCommonality>1</mineableScatterCommonality>
-        <mineableScatterLumpSizeRange>
-          <min>1</min>
-          <max>1</max>
-        </mineableScatterLumpSizeRange>	
+        <mineableYield>60</mineableYield>
+      <mineableScatterCommonality>0.07</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>2</min>
+        <max>8</max>
+      </mineableScatterLumpSizeRange>
       </building>
     </value>
   </Operation>
@@ -42,12 +42,12 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkSilverOre</mineableThing>
-        <mineableYield>1</mineableYield>
-        <mineableScatterCommonality>1</mineableScatterCommonality>
-        <mineableScatterLumpSizeRange>
-          <min>1</min>
-          <max>1</max>
-        </mineableScatterLumpSizeRange>	
+        <mineableYield>60</mineableYield>
+		      <mineableScatterCommonality>0.10</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>4</min>
+        <max>12</max>
+      </mineableScatterLumpSizeRange>
       </building>
     </value>
   </Operation>
@@ -58,13 +58,13 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkPlasteelOre</mineableThing>
-        <mineableYield>1</mineableYield>
-        <mineableScatterCommonality>1</mineableScatterCommonality>
-        <mineableScatterLumpSizeRange>
-          <min>1</min>
-          <max>1</max>
-        </mineableScatterLumpSizeRange>	
-      </building>
+        <mineableYield>65</mineableYield>
+		      <mineableScatterCommonality>0.05</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>2</min>
+        <max>8</max>
+      </mineableScatterLumpSizeRange>
+    </building>
     </value>
   </Operation> 
   
@@ -74,12 +74,12 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkUraniumOre</mineableThing>
-        <mineableYield>1</mineableYield>
-        <mineableScatterCommonality>1</mineableScatterCommonality>
-        <mineableScatterLumpSizeRange>
-          <min>1</min>
-          <max>1</max>
-        </mineableScatterLumpSizeRange>	
+        <mineableYield>70</mineableYield>
+      <mineableScatterCommonality>0.12</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>6</min>
+        <max>12</max>
+      </mineableScatterLumpSizeRange>
       </building>
     </value>
   </Operation>
@@ -106,6 +106,44 @@
 		<xpath>*/MapGeneratorDef[@Name = "MapCommonBase"]/genSteps</xpath>
 		<value><li>MiningNodes</li></value>
 	</Operation> 
+	
+	
+	   <Operation Class="PatchOperationAdd">
+       <xpath>*/ThingDef[defName = "FueledSmithy"]/comps/li[@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+       <value>
+             <li>CoalOre</li>
+       </value>
+   </Operation>   
+   
+   
+      <Operation Class="PatchOperationAdd">
+       <xpath>*/ThingDef[defName = "FueledStove"]/comps/li[@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+       <value>
+             <li>CoalOre</li>
+       </value>
+   </Operation> 
+
+
+   <Operation Class="PatchOperationAdd">
+       <xpath>*/ThingDef[defName = "WoodFiredGenerator"]/comps/li[@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+       <value>
+             <li>CoalOre</li>
+       </value>
+   </Operation>  
+
+   <Operation Class="PatchOperationReplace">
+      <xpath>*/ThingDef[defName = "WoodFiredGenerator"]/description</xpath>
+      <value>
+         <description>Produces power by consuming wood fuel or coal. Must be fueled by hand.</description>   
+      </value>
+   </Operation>   
+   
+     <Operation Class="PatchOperationReplace">
+      <xpath>*/ThingDef[defName = "WoodFiredGenerator"]/label</xpath>
+      <value>
+         <label>fueled generator</label>   
+      </value>
+   </Operation>   
   
   
 

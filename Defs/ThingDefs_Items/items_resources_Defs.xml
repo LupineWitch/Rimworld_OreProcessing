@@ -13,8 +13,9 @@
     </graphicData>
     <soundInteract>Stone_Drop</soundInteract>
     <soundDrop>Stone_Drop</soundDrop>
+	<stackLimit>300</stackLimit>
     <statBases>
-      <MarketValue>2</MarketValue>
+      <MarketValue>0.45</MarketValue>
       <MaxHitPoints>100</MaxHitPoints>	  
       <Mass>0.5</Mass>
       <DeteriorationRate>2</DeteriorationRate>
@@ -59,7 +60,7 @@
       <color>(144,108,63)</color>
     </graphicData>
     <statBases>
-      <Mass>1</Mass>
+      <Mass>0.85</Mass>
       <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
     </statBases>
     <stuffProps>
@@ -69,11 +70,11 @@
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <stuffAdjective>adobe</stuffAdjective>
       <statFactors>
-        <Beauty>1.1</Beauty>  
-        <MaxHitPoints>1.4</MaxHitPoints>
+        <Beauty>0.8</Beauty>  
+        <MaxHitPoints>0.7</MaxHitPoints>
 		<WorkToBuild>2.0</WorkToBuild>
 		<WorkToMake>1.8</WorkToMake>
-		<Flammability>0.2</Flammability>	
+		<Flammability>0.01</Flammability>	
       </statFactors>
     </stuffProps>
   </ThingDef>

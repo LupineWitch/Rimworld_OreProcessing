@@ -20,7 +20,7 @@
             <li>ChunkIronOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>70</count>
       </li>
 	  <li>
 		<filter>
@@ -28,11 +28,11 @@
 				<li>CoalOre</li>
 			</thingDefs>
 		</filter>
-		<count>40</count>
+		<count>75</count>
 		</li>
     </ingredients>
     <products>
-      <Steel>10</Steel>
+      <Steel>20</Steel>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
@@ -58,24 +58,15 @@
             <li>ChunkGoldOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>90</count>
       </li>
-	  <li>
-		<filter>
-			<thingDefs>
-				<li>CoalOre</li>
-			</thingDefs>
-		</filter>
-		<count>20</count>
-		</li>
     </ingredients>
     <products>
-      <Gold>6</Gold>
+      <Gold>20</Gold>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
         <li>ChunkGoldOre</li>
-		<li>CoalOre</li>
       </thingDefs>
     </fixedIngredientFilter>
   </RecipeDef> 
@@ -96,24 +87,15 @@
             <li>ChunkSilverOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>90</count>
       </li>
-	  <li>
-		<filter>
-			<thingDefs>
-				<li>CoalOre</li>
-			</thingDefs>
-		</filter>
-		<count>80</count>
-		</li>
     </ingredients>
     <products>
-      <Silver>14</Silver>
+      <Silver>30</Silver>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
         <li>ChunkSilverOre</li>
-		<li>CoalOre</li>
       </thingDefs>
     </fixedIngredientFilter>
   </RecipeDef> 
@@ -134,14 +116,14 @@
             <li>ChunkIronOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>70</count>
       </li>      <li>
         <filter>
           <thingDefs>
             <li>CoalOre</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>40</count>
       </li>
     </ingredients>
     <products>
@@ -171,7 +153,7 @@
             <li>ChunkSilverOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>70</count>
       </li>
     </ingredients>
     <products>
@@ -200,11 +182,11 @@
             <li>ChunkGoldOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>60</count>
       </li>
     </ingredients>
     <products>
-      <Gold>20</Gold>
+      <Gold>40</Gold>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
@@ -229,7 +211,7 @@
             <li>ChunkIronOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>70</count>
       </li>
 	        <li>
         <filter>
@@ -237,11 +219,11 @@
             <li>CoalOre</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>30</count>
       </li>
     </ingredients>
     <products>
-      <Steel>35</Steel>
+      <Steel>40</Steel>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
@@ -266,7 +248,7 @@
 				<li>ChunkUraniumOre</li>
 			  </thingDefs>
 			</filter>
-			<count>1</count>
+			<count>50</count>
 		  </li>
 		<li>
 			<filter>
@@ -274,11 +256,11 @@
 					<li>Chemfuel</li>
 				</thingDefs>
 			</filter>
-			<count>15</count>
+			<count>25</count>
 		</li>
     </ingredients>
     <products>
-      <Uranium>15</Uranium>
+      <Uranium>20</Uranium>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
@@ -304,7 +286,7 @@
             <li>ChunkPlasteelOre</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>45</count>
       </li>      
 	  <li>
         <filter>
@@ -312,11 +294,11 @@
             <li>Steel</li>
           </thingDefs>
         </filter>
-        <count>25</count>
+        <count>30</count>
       </li>
     </ingredients>
     <products>
-      <Plasteel>25</Plasteel>
+      <Plasteel>40</Plasteel>
     </products>
     <fixedIngredientFilter>
       <thingDefs>

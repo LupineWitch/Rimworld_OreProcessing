@@ -32,7 +32,7 @@
 		<comps>
 			<li Class="oreprocessing.CompProperties_DryingSpot">
 				<dryingTicks>720</dryingTicks>
-				<efekt>AdobeBlocks</efekt>
+				<efekt>BlocksAdobe</efekt>
 			</li>
 		</comps>
 		<pathCost>60</pathCost>
