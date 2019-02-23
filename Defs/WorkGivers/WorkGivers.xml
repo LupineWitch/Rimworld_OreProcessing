@@ -22,23 +22,24 @@
     <prioritizeSustains>true</prioritizeSustains>	
   </WorkGiverDef>  
   
+  
     <WorkGiverDef>
-    <defName>DoBillsFueledSmelter</defName>
+    <defName>DoBOreMill</defName>
     <label>smelt items</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Crafting</workType>
     <priorityInType>80</priorityInType>
     <fixedBillGiverDefs>
-      <li>FueledSmelter</li>
-	  <li>PrimitiveSmelter</li>
+      <li>RichOreMill</li>
     </fixedBillGiverDefs>
-    <verb>Smelt</verb>
-    <gerund>Smelting at</gerund>
+    <verb>Refine</verb>
+    <gerund>Refining at</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
+      <li>Sight</li>
     </requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
+  </WorkGiverDef> 
   
   
       <WorkGiverDef>

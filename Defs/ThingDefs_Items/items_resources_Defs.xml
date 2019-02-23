@@ -14,8 +14,14 @@
     <soundInteract>Stone_Drop</soundInteract>
     <soundDrop>Stone_Drop</soundDrop>
 	<stackLimit>300</stackLimit>
+		    <deepCommonality>4</deepCommonality>
+    <deepCountPerPortion>35</deepCountPerPortion>
+    <deepLumpSizeRange>
+      <min>20</min>
+      <max>40</max>
+    </deepLumpSizeRange>
     <statBases>
-      <MarketValue>0.45</MarketValue>
+      <MarketValue>0.2</MarketValue>
       <MaxHitPoints>100</MaxHitPoints>	  
       <Mass>0.5</Mass>
       <DeteriorationRate>2</DeteriorationRate>
@@ -26,6 +32,35 @@
       <li>ResourcesRaw</li>
     </thingCategories>
 	</ThingDef>
+	
+	
+	
+	  <ThingDef ParentName="RockBase">
+    <defName>MineableCoal</defName>
+    <label>coal</label>
+    <description>The remains of some ancient vegetation. Pressed in rocks.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(114,92,83)</color>
+      <colorTwo>(0,0,0)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CoalOre</mineableThing>
+      <mineableYield>70</mineableYield>
+      <mineableScatterCommonality>1</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>30</min>
+        <max>40</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+	
 	
 	
 	  <ThingDef ParentName="ResourceBase">

@@ -12,11 +12,12 @@
     <workAmount>2000</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
-		<effectWorking>Mine</effectWorking>
+	<effectWorking>Mine</effectWorking>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
-		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+	<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
+	<efficiencyStat>MiningYield</efficiencyStat>
     <products>
-     <ChunkIronOre>35</ChunkIronOre>
+     <ChunkIronOre>20</ChunkIronOre>
     </products>
 	      <skillRequirements>
 			<Mining>3</Mining>
@@ -32,10 +33,11 @@
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
 	<effectWorking>Mine</effectWorking>
+		<efficiencyStat>MiningYield</efficiencyStat>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkSilverOre>40</ChunkSilverOre>
+     <ChunkSilverOre>10</ChunkSilverOre>
     </products>
 	    <skillRequirements>
 			<Mining>8</Mining>
@@ -50,11 +52,12 @@
     <jobString>Mining coal</jobString>
     <workAmount>1800</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
+		<efficiencyStat>MiningYield</efficiencyStat>
     <effectWorking>CutStone</effectWorking>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <CoalOre>50</CoalOre>
+     <CoalOre>25</CoalOre>
     </products>
 	      <skillRequirements>
 			<Mining>1</Mining>
@@ -68,11 +71,12 @@
     <jobString>mine gold</jobString>
     <workAmount>3500</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
+		<efficiencyStat>MiningYield</efficiencyStat>
 		<effectWorking>Mine</effectWorking>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkGoldOre>1</ChunkGoldOre>
+     <ChunkGoldOre>10</ChunkGoldOre>
     </products>
 	    <skillRequirements>
 			<Mining>12</Mining>
@@ -88,10 +92,11 @@
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
 		<effectWorking>Mine</effectWorking>
+			<efficiencyStat>MiningYield</efficiencyStat>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkPlasteelOre>15</ChunkPlasteelOre>
+     <ChunkPlasteelOre>10</ChunkPlasteelOre>
     </products>
 	      <skillRequirements>
 			<Mining>15</Mining>
@@ -106,11 +111,12 @@
     <workAmount>3400</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
+		<efficiencyStat>MiningYield</efficiencyStat>
 		<effectWorking>Mine</effectWorking>
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkUraniumOre>25</ChunkUraniumOre>
+     <ChunkUraniumOre>35</ChunkUraniumOre>
     </products>
       <skillRequirements>
 			<Mining>15</Mining>

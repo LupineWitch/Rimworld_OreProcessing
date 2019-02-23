@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>UniversalSmelterLowTech</defName>
+    <label>smelting klin</label>
+    <description>A simple furnace to smelt low amounts of steel or smelt metals with low melting point. Can heat rooms to dangerous temperatures.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Furnace/Furnace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5,1.7)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <comps>
+	      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>6.5</heatPerSecond>
+        <heatPushMaxTemperature>65</heatPushMaxTemperature>
+      </li>
+	<li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>180.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>CoalOre</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+      </li>
+	  <li Class="UniversalFermenter.CompProperties_UniversalFermenter">
+		<products>
+			<li>
+				<thingDef>Gold</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>ChunkGoldOre</li>
+					</thingDefs>
+				</ingredientFilter>
+				<maxCapacity>75</maxCapacity>
+				<efficiency>0.5</efficiency>
+				<baseFermentationDuration>8430</baseFermentationDuration>
+			</li>			
+			<li>
+				<thingDef>Steel</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>ChunkIronOre</li>
+					</thingDefs>
+				</ingredientFilter>
+				<maxCapacity>75</maxCapacity>
+				<efficiency>0.4</efficiency>
+				<baseFermentationDuration>8430</baseFermentationDuration>
+			</li>
+			<li>
+				<thingDef>Silver</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>ChunkSilverOre</li>
+					</thingDefs>
+				</ingredientFilter>
+				<efficiency>0.8</efficiency>
+				<maxCapacity>75</maxCapacity>
+				<baseFermentationDuration>8000</baseFermentationDuration>
+			</li>
+		</products>
+	  </li>
+	  <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <designationCategory>Production</designationCategory>
+  </ThingDef>
+  
+  
+   <ThingDef ParentName="BuildingBase">
+    <defName>UniversalSmelterIndustrialTech</defName>
+    <label>blast furnace</label>
+    <description>An industrial furnace for quick smelting of large quantities of ore. Uses a lot of coal. A lot. Can heat rooms to high temperatures.</description>
+    <graphicData>
+      <texPath>Things/Buildings/FurnaceIndustrial/FurnaceIndustrial</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.2,3.2)</drawSize>
+	  <color>(145,87,5)</color>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<size>(3,3)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+	<pathCost>60</pathCost>
+    <fillPercent>0.8</fillPercent>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+     <costList>
+      <Steel>120</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <comps>
+	
+	      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>7.5</heatPerSecond>
+        <heatPushMaxTemperature>70</heatPushMaxTemperature>
+      </li>
+	<li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>250.0</fuelConsumptionRate>
+        <fuelCapacity>150.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>CoalOre</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+      </li>
+	  <li Class="UniversalFermenter.CompProperties_UniversalFermenter">
+		<products>
+			<li>
+				<thingDef>Gold</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>ChunkGoldOre</li>
+					</thingDefs>
+				</ingredientFilter>
+				<maxCapacity>150</maxCapacity>
+				<efficiency>0.8</efficiency>
+				<baseFermentationDuration>5000</baseFermentationDuration>
+			</li>
+			<li>
+				<thingDef>Silver</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>ChunkSilverOre</li>
+					</thingDefs>
+				</ingredientFilter>
+				<efficiency>0.8</efficiency>
+				<maxCapacity>150</maxCapacity>
+				<baseFermentationDuration>5000</baseFermentationDuration>
+			</li>
+			<li>
+				<thingDef>Steel</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>ChunkIronOre</li>
+					</thingDefs>
+				</ingredientFilter>
+				<maxCapacity>150</maxCapacity>
+				<efficiency>0.9</efficiency>
+				<baseFermentationDuration>6500</baseFermentationDuration>
+			</li>
+		</products>
+	  </li>
+	  <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+	    <researchPrerequisites>
+      <li>MedievalSmelting</li>
+    </researchPrerequisites>
+	  <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  
+  
+  
+  
+  
+  
+  </Defs>

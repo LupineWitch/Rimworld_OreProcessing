@@ -84,15 +84,7 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>*/ThingDef[defName = "ElectricSmelter"]/recipes</xpath>
-    <value>
-      <li>SmeltIronOreChunkE</li>				
-      <li>SmeltUraniumOreChunkE</li>			
-      <li>SmeltPlasteelOreChunkE</li>			
-    </value>
 	
-  </Operation>  
   
   <Operation Class="PatchOperationAdd">
     <xpath>*/ThingDef[defName = "ElectricSmelter"]/researchPrerequisites</xpath>
@@ -145,6 +137,67 @@
       </value>
    </Operation>   
   
+  <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Steel"]/deepCommonality</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Steel"]/deepCountPerPortion</xpath>
+</Operation> 
+
+<Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Steel"]/deepLumpSizeRange</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Silver"]/deepCommonality</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Silver"]/deepCountPerPortion</xpath>
+</Operation> 
+
+<Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Silver"]/deepLumpSizeRange</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Gold"]/deepCommonality</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Gold"]/deepCountPerPortion</xpath>
+</Operation> 
+
+<Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Gold"]/deepLumpSizeRange</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Uranium"]/deepCommonality</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Uranium"]/deepCountPerPortion</xpath>
+</Operation> 
+
+<Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Uranium"]/deepLumpSizeRange</xpath>
+</Operation>
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Plasteel"]/deepCommonality</xpath>
+</Operation> 
+
+ <Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Plasteel"]/deepCountPerPortion</xpath>
+</Operation> 
+
+<Operation Class="PatchOperationRemove">
+    <xpath>*/ThingDef[defName = "Plasteel"]/deepLumpSizeRange</xpath>
+</Operation>
+
+
   
 
 </Patch>

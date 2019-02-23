@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+
+	<ResearchTabDef>
+		<defName>OreProcess</defName>
+		<label>Ore processing and mining</label>
+	</ResearchTabDef>
+	
+	
     <ResearchProjectDef>
     <defName>MedievalSmelting</defName>
-    <label>Efficient smelting</label>
-    <description>Build fueled furnaces, to extract ore more efficiently, also see what other metals can be smelted to make use of them.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Medieval</techLevel>
+    <label>blast furnaces </label>
+	<tab>OreProcess</tab>
+    <description>Build blast furnaces, to extract ore more efficiently.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>
     <researchViewY>3.4</researchViewY>
+	<prerequisites>
+	<li>Smithing</li>
+	</prerequisites>
   </ResearchProjectDef>  
 
   <ResearchProjectDef>
     <defName>ElectricSmelting</defName>
     <label>electric smelting</label>
-    <description>Build electric furnaces, to extract ore more efficiently, also see what other metals can be smelted to make use of them.</description>
+	<tab>OreProcess</tab>
+    <description>Build electric furnaces, to extract ore from slag.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>4</researchViewX>
@@ -22,6 +34,55 @@
 	<prerequisites>
 	  <li>Electricity</li>
       <li>MedievalSmelting</li>
+    </prerequisites>
+  </ResearchProjectDef> 
+
+
+
+  <ResearchProjectDef>
+    <defName>AdvancedSmelting</defName>
+    <label>advanced smelting</label>
+	<tab>OreProcess</tab>
+    <description>Build ore refinery, to aquire such metals as uranium or plasteel.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>5</researchViewX>
+    <researchViewY>2.8</researchViewY>
+	<prerequisites>
+	  <li>Electricity</li>
+      <li>MedievalSmelting</li>
+	   <li>ElectricSmelting</li>
+	  <li>BiofuelRefining</li>
+    </prerequisites>
+  </ResearchProjectDef>
+   
+
+  <ResearchProjectDef>
+    <defName>Mining1</defName>
+    <label>mining cabinets</label>
+    <description>How about tool cabinets, but making mining slightly faster? Also adds handcranked ore crushers.</description>
+    <baseCost>900</baseCost>
+	<tab>OreProcess</tab>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>5</researchViewX>
+    <researchViewY>0.7</researchViewY>
+	<prerequisites>
+	  <li>ComplexFurniture</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Mining2</defName>
+    <label>mining shaft</label>
+    <description>How about tool cabinets, but making mining slightly faster? Also adds handcranked ore crushers.</description>
+    <baseCost>1800</baseCost>
+	<tab>OreProcess</tab>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>7</researchViewX>
+    <researchViewY>0.7</researchViewY>
+	<prerequisites>
+	  <li>Mining1</li>
+	  <li>Electricity</li>
     </prerequisites>
   </ResearchProjectDef>
   
