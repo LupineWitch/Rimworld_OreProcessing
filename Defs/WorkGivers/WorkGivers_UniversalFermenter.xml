@@ -3,8 +3,8 @@
 	
 	<WorkGiverDef>
 		<defName>UF_WorkGiver_TakeProductOutOfUniversalFermenter</defName>
-		<label>take product out of fermenter</label>
-		<giverClass>UniversalFermenter.WorkGiver_TakeProductOutOfUniversalFermenter</giverClass>
+		<label>take product out of smelter</label>
+		<giverClass>UniversalFermenterOre.WorkGiver_TakeProductOutOfUniversalFermenter</giverClass>
 		<workType>Hauling</workType>
 		<verb>take product</verb>
 		<gerund>taking product from</gerund>
@@ -16,8 +16,8 @@
 	
 	<WorkGiverDef>
 		<defName>UF_WorkGiver_FillUniversalFermenter</defName>
-		<label>fill fermenter</label>
-		<giverClass>UniversalFermenter.WorkGiver_FillUniversalFermenter</giverClass>
+		<label>fill smelter</label>
+		<giverClass>UniversalFermenterOre.WorkGiver_FillUniversalFermenter</giverClass>
 		<workType>Hauling</workType>
 		<verb>fill</verb>
 		<gerund>filling</gerund>
