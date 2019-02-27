@@ -49,7 +49,7 @@
         </fuelFilter>
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
       </li>
-	  <li Class="UniversalFermenter.CompProperties_UniversalFermenter">
+	  <li Class="UniversalFermenterOre.CompProperties_UniversalFermenter">
 		<products>
 			<li>
 				<thingDef>Gold</thingDef>
@@ -150,7 +150,7 @@
         </fuelFilter>
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
       </li>
-	  <li Class="UniversalFermenter.CompProperties_UniversalFermenter">
+	  <li Class="UniversalFermenterOre.CompProperties_UniversalFermenter">
 		<products>
 			<li>
 				<thingDef>Gold</thingDef>
