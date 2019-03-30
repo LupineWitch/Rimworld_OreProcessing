@@ -9,7 +9,7 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkIronOre</mineableThing>
-        <mineableYield>70</mineableYield>
+        <mineableYield>40</mineableYield>
 		<mineableScatterCommonality>1</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>30</min>
@@ -25,7 +25,7 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkGoldOre</mineableThing>
-        <mineableYield>60</mineableYield>
+        <mineableYield>40</mineableYield>
       <mineableScatterCommonality>0.07</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>2</min>
@@ -42,7 +42,7 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkSilverOre</mineableThing>
-        <mineableYield>60</mineableYield>
+        <mineableYield>40</mineableYield>
 		      <mineableScatterCommonality>0.10</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>4</min>
@@ -58,7 +58,7 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkPlasteelOre</mineableThing>
-        <mineableYield>65</mineableYield>
+        <mineableYield>45</mineableYield>
 		      <mineableScatterCommonality>0.05</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>2</min>
@@ -74,7 +74,7 @@
       <building>
         <isResourceRock>true</isResourceRock>
         <mineableThing>ChunkUraniumOre</mineableThing>
-        <mineableYield>70</mineableYield>
+        <mineableYield>45</mineableYield>
       <mineableScatterCommonality>0.12</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>6</min>

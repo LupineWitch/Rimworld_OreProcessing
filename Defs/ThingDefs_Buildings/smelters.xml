@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="BuildingBase">
-    <defName>UniversalSmelterLowTech</defName>
+
+
+  <ThingDef ParentName="BenchBase">
+    <defName>FueledKlin</defName>
     <label>smelting klin</label>
-    <description>A simple furnace to smelt low amounts of steel or smelt metals with low melting point. Can heat rooms to dangerous temperatures.</description>
+    <description>A coal fueled kiln, smelts metals with low efficiency.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
     <graphicData>
       <texPath>Things/Buildings/Furnace/Furnace</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.5,1.7)</drawSize>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.3,1.4)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -15,95 +18,70 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.45</fillPercent>
-    <pathCost>60</pathCost>
-    <statBases>
-      <WorkToBuild>600</WorkToBuild>
-      <Mass>10</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <stuffCategories>
+	  <stuffCategories>
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>50</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+	<li>SmeltIronOreChunkPrimitive</li>
+	<li>SmeltSilverOreChunkPrimitive</li>
+	<li>SmeltGoldOreChunkPrimitive</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
     <comps>
-	      <li Class="CompProperties_Glower">
-        <glowRadius>4</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>6.5</heatPerSecond>
-        <heatPushMaxTemperature>65</heatPushMaxTemperature>
-      </li>
-	<li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>180.0</fuelConsumptionRate>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>160.0</fuelConsumptionRate>
         <fuelCapacity>50.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
             <li>CoalOre</li>
           </thingDefs>
         </fuelFilter>
-        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
       </li>
-	  <li Class="UniversalFermenterOre.CompProperties_UniversalFermenter">
-		<products>
-			<li>
-				<thingDef>Gold</thingDef>
-				<ingredientFilter>
-					<thingDefs>
-						<li>ChunkGoldOre</li>
-					</thingDefs>
-				</ingredientFilter>
-				<maxCapacity>75</maxCapacity>
-				<efficiency>0.5</efficiency>
-				<baseFermentationDuration>8430</baseFermentationDuration>
-			</li>			
-			<li>
-				<thingDef>Steel</thingDef>
-				<ingredientFilter>
-					<thingDefs>
-						<li>ChunkIronOre</li>
-					</thingDefs>
-				</ingredientFilter>
-				<maxCapacity>75</maxCapacity>
-				<efficiency>0.4</efficiency>
-				<baseFermentationDuration>8430</baseFermentationDuration>
-			</li>
-			<li>
-				<thingDef>Silver</thingDef>
-				<ingredientFilter>
-					<thingDefs>
-						<li>ChunkSilverOre</li>
-					</thingDefs>
-				</ingredientFilter>
-				<efficiency>0.8</efficiency>
-				<maxCapacity>75</maxCapacity>
-				<baseFermentationDuration>8000</baseFermentationDuration>
-			</li>
-		</products>
-	  </li>
-	  <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>9</heatPerSecond>
+      </li>
+	      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
     </comps>
-    <tickerType>Normal</tickerType>
-    <rotatable>false</rotatable>
-	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-    <designationCategory>Production</designationCategory>
-  </ThingDef>
-  
-  
-   <ThingDef ParentName="BuildingBase">
-    <defName>UniversalSmelterIndustrialTech</defName>
-    <label>blast furnace</label>
-    <description>An industrial furnace for quick smelting of large quantities of ore. Uses a lot of coal. A lot. Can heat rooms to high temperatures.</description>
+	<rotatable>true</rotatable>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.85</heatPerTickWhileWorking>
+    </building>
+  </ThingDef> 
+
+
+  <ThingDef ParentName="BenchBase">
+    <defName>HugeFurnace</defName>
+    <label>Industrial-Grade Furnace</label>
+    <description>A coal fueled industrial-grade furnace. Marks a beginning of steel era.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
     <graphicData>
       <texPath>Things/Buildings/FurnaceIndustrial/FurnaceIndustrial</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3.2,3.2)</drawSize>
-	  <color>(145,87,5)</color>
+      <drawSize>(3,3)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -111,92 +89,146 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-	<size>(3,3)</size>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-	<pathCost>60</pathCost>
-    <fillPercent>0.8</fillPercent>
-    <statBases>
-      <WorkToBuild>800</WorkToBuild>
-      <Mass>10</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-     <costList>
-      <Steel>120</Steel>
-    </costList>
-    <stuffCategories>
+	  <stuffCategories>
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>50</costStuffCount>
+	    <costList>
+      <Steel>100</Steel>
+    </costList>
+	<rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.75</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <size>(3,3)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+	<li>SmeltIronOreChunk</li>
+	<li>SmeltGoldOreChunk</li>
+	<li>SmeltSilverOreChunk</li>
+	<li>SmeltIronOreChunkBulk</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
     <comps>
-	
-	      <li Class="CompProperties_Glower">
-        <glowRadius>6</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>7.5</heatPerSecond>
-        <heatPushMaxTemperature>70</heatPushMaxTemperature>
-      </li>
-	<li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>250.0</fuelConsumptionRate>
-        <fuelCapacity>150.0</fuelCapacity>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>240.0</fuelConsumptionRate>
+        <fuelCapacity>100.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
             <li>CoalOre</li>
           </thingDefs>
         </fuelFilter>
-        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
       </li>
-	  <li Class="UniversalFermenterOre.CompProperties_UniversalFermenter">
-		<products>
-			<li>
-				<thingDef>Gold</thingDef>
-				<ingredientFilter>
-					<thingDefs>
-						<li>ChunkGoldOre</li>
-					</thingDefs>
-				</ingredientFilter>
-				<maxCapacity>150</maxCapacity>
-				<efficiency>0.8</efficiency>
-				<baseFermentationDuration>5000</baseFermentationDuration>
-			</li>
-			<li>
-				<thingDef>Silver</thingDef>
-				<ingredientFilter>
-					<thingDefs>
-						<li>ChunkSilverOre</li>
-					</thingDefs>
-				</ingredientFilter>
-				<efficiency>0.8</efficiency>
-				<maxCapacity>150</maxCapacity>
-				<baseFermentationDuration>5000</baseFermentationDuration>
-			</li>
-			<li>
-				<thingDef>Steel</thingDef>
-				<ingredientFilter>
-					<thingDefs>
-						<li>ChunkIronOre</li>
-					</thingDefs>
-				</ingredientFilter>
-				<maxCapacity>150</maxCapacity>
-				<efficiency>0.9</efficiency>
-				<baseFermentationDuration>6500</baseFermentationDuration>
-			</li>
-		</products>
-	  </li>
-	  <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>10</heatPerSecond>
+      </li>
+	        <li Class="CompProperties_Glower">
+        <glowRadius>7</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
     </comps>
-    <tickerType>Normal</tickerType>
-    <rotatable>false</rotatable>
-    <designationCategory>Production</designationCategory>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>4</heatPerTickWhileWorking>
+    </building>
 	    <researchPrerequisites>
       <li>MedievalSmelting</li>
     </researchPrerequisites>
-	  <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
   </ThingDef>
+  
+  
+  <ThingDef ParentName="BenchBase">
+    <defName>FueledSmelter</defName>
+    <label>fueled smelter</label>
+    <description>Extracts usable metal from slag chunks and other mixed metal items. Consumes a lot of coal.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/FueledSmelter/FueledSmelter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+		  <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <Steel>100</Steel>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3500</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+	  <WorkTableWorkSpeedFactor>0.7</WorkTableWorkSpeedFactor>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <recipes>
+      <li>ExtractMetalFromSlag</li>
+      <li>SmeltWeapon</li>
+      <li>DestroyWeapon</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+	      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>160.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>CoalOre</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>9</heatPerSecond>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+    </building>
+    <researchPrerequisites>
+      <li>MedievalSmelting</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+ 
   
   
   

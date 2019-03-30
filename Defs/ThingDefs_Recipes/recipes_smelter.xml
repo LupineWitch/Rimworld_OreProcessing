@@ -5,6 +5,247 @@
 <Defs>
   
   <RecipeDef>
+    <defName>SmeltIronOreChunk</defName>
+    <label>refine steel ore</label>
+    <description>With use of compounds and heat refine iron chunk into useful metal</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkIronOre</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>CoalOre</li>
+					</thingDefs>
+			</filter>
+			<count>25</count>
+		</li>
+    </ingredients>
+    <products>
+      <Steel>35</Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkIronOre</li>
+		<li>CoalOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>  
+
+
+  <RecipeDef>
+    <defName>SmeltGoldOreChunk</defName>
+    <label>refine Gold ore</label>
+    <description>With use of compounds and heat refine gold chunk into useful metal</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>1400</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkGoldOre</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+    </ingredients>
+    <products>
+      <Gold>35</Gold>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkGoldOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  
+  <RecipeDef>
+    <defName>SmeltSilverOreChunk</defName>
+    <label>refine silver ore</label>
+    <description>With use of compounds and heat refine silver chunk into useful metal</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>1400</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkSilverOre</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+    </ingredients>
+    <products>
+      <Silver>35</Silver>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSilverOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef> 
+
+  <RecipeDef>
+    <defName>SmeltIronOreChunkBulk</defName>
+    <label>refine steel ore in bulk</label>
+    <description>With use of compounds and heat refine iron chunk into useful metal. Industrial quantities!</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>3225</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkIronOre</li>
+			  </thingDefs>
+			</filter>
+			<count>120</count>
+		  </li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>CoalOre</li>
+					</thingDefs>
+			</filter>
+			<count>75</count>
+		</li>
+    </ingredients>
+    <products>
+      <Steel>105</Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkIronOre</li>
+		<li>CoalOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef> 
+
+
+  <RecipeDef>
+    <defName>SmeltGoldOreChunkPrimitive</defName>
+    <label>refine gold ore</label>
+    <description>With use of compounds and heat refine gold chunk into useful metal</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>1800</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkGoldOre</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+    </ingredients>
+    <products>
+      <Gold>25</Gold>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkGoldOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>  
+
+  <RecipeDef>
+    <defName>SmeltIronOreChunkPrimitive</defName>
+    <label>refine steel ore</label>
+    <description>With use of compounds and heat refine iron chunk into useful metal.</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkIronOre</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>CoalOre</li>
+					</thingDefs>
+			</filter>
+			<count>35</count>
+		</li>
+    </ingredients>
+    <products>
+      <Steel>20</Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkIronOre</li>
+		<li>CoalOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef> 
+  <RecipeDef>
+  
+  
+  
+
+  
+  
+  
+    <defName>SmeltSilverOreChunkPrimitive</defName>
+    <label>refine silver ore</label>
+    <description>With use of compounds and heat refine silver chunk into useful metal.</description>
+    <jobString>Smelting metal from chunk.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkSilverOre</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+    </ingredients>
+    <products>
+      <Silver>20</Silver>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSilverOre</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef> 
+
+
+
+  <RecipeDef>
     <defName>SmeltUraniumOreChunk</defName>
     <label>refine uranium</label>
     <description>With use of compounds and heat refine uranium chunk into useful metal</description>

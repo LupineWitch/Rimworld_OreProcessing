@@ -40,7 +40,7 @@
     <description>A piece of iron ore. It's useless in its current form, it can be smelted to aquire puryfied ore.</description>
 	<stackLimit>200</stackLimit>
 	    <deepCommonality>4</deepCommonality>
-    <deepCountPerPortion>35</deepCountPerPortion>
+    <deepCountPerPortion>60</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>20</min>
       <max>40</max>
@@ -75,7 +75,7 @@
     <soundDrop>ChunkRock_Drop</soundDrop>
 		<stackLimit>200</stackLimit>
 			<deepCommonality>0.5</deepCommonality>
-    <deepCountPerPortion>10</deepCountPerPortion>
+    <deepCountPerPortion>60</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>1</min>
       <max>5</max>
@@ -99,7 +99,7 @@
     </statBases>
 		<stackLimit>200</stackLimit>
 	<deepCommonality>0.5</deepCommonality>
-    <deepCountPerPortion>10</deepCountPerPortion>
+    <deepCountPerPortion>60</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>1</min>
       <max>5</max>
@@ -120,7 +120,7 @@
     </graphicData>
 		<stackLimit>200</stackLimit>
 		    <deepCommonality>1</deepCommonality>
-    <deepCountPerPortion>7</deepCountPerPortion>
+    <deepCountPerPortion>60</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>2</min>
       <max>10</max>
@@ -145,7 +145,7 @@
     </graphicData>
 		<stackLimit>200</stackLimit>
 		    <deepCommonality>1</deepCommonality>
-    <deepCountPerPortion>10</deepCountPerPortion>
+    <deepCountPerPortion>60</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>4</min>
       <max>10</max>

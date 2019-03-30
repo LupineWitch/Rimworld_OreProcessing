@@ -15,7 +15,7 @@
     <soundDrop>Stone_Drop</soundDrop>
 	<stackLimit>300</stackLimit>
 		    <deepCommonality>4</deepCommonality>
-    <deepCountPerPortion>35</deepCountPerPortion>
+    <deepCountPerPortion>50</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>20</min>
       <max>40</max>
@@ -52,7 +52,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>CoalOre</mineableThing>
-      <mineableYield>70</mineableYield>
+      <mineableYield>50</mineableYield>
       <mineableScatterCommonality>1</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>30</min>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <WorkTypeDef>
+    <defName>MiningOreNode</defName>
+    <labelShort>Excavate</labelShort>
+    <pawnLabel>Miner</pawnLabel>
+    <gerundLabel>mining</gerundLabel>
+    <description>Digging and drilling at mining platform.(Worktype added by ore processing).</description>
+    <verb>Mine Quarry</verb>
+    <naturalPriority>650</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <relevantSkills>
+      <li>Mining</li>
+    </relevantSkills>
+    <workTags>
+      <li>ManualSkilled</li>
+      <li>Mining</li>
+    </workTags>
+  </WorkTypeDef>
+</Defs>

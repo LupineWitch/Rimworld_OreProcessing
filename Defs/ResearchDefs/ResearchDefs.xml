@@ -57,34 +57,4 @@
   </ResearchProjectDef>
    
 
-  <ResearchProjectDef>
-    <defName>Mining1</defName>
-    <label>mining cabinets</label>
-    <description>How about tool cabinets, but making mining slightly faster? Also adds handcranked ore crushers.</description>
-    <baseCost>900</baseCost>
-	<tab>OreProcess</tab>
-    <techLevel>Industrial</techLevel>
-    <researchViewX>5</researchViewX>
-    <researchViewY>0.7</researchViewY>
-	<prerequisites>
-	  <li>ComplexFurniture</li>
-    </prerequisites>
-  </ResearchProjectDef>
-
-  <ResearchProjectDef>
-    <defName>Mining2</defName>
-    <label>mining shaft</label>
-    <description>How about tool cabinets, but making mining slightly faster? Also adds handcranked ore crushers.</description>
-    <baseCost>1800</baseCost>
-	<tab>OreProcess</tab>
-    <techLevel>Industrial</techLevel>
-    <researchViewX>7</researchViewX>
-    <researchViewY>0.7</researchViewY>
-	<prerequisites>
-	  <li>Mining1</li>
-	  <li>Electricity</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  
-
 </Defs>

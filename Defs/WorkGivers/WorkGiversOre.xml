@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+
+<Defs>
+  
+   <WorkGiverDef>
+    <defName>Minig_MiningPlatformOre</defName>
+    <label>mine at node for resources</label>
+    <giverClass>oreprocessing.WorkGiver_MiningOperation</giverClass>
+    <workType>MiningOreNode</workType>
+    <priorityInType>100</priorityInType>
+    <verb>mine at</verb>
+    <gerund>mining at</gerund>
+		<tagToGive>Fieldwork</tagToGive>
+		<requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+  
+  
+    <WorkGiverDef>
+    <defName>DoBOreMill</defName>
+    <label>smelt items</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+      <li>RichOreMill</li>
+      <li>FueledKlin</li>
+      <li>HugeFurnace</li>
+      <li>FueledSmelter</li>
+    </fixedBillGiverDefs>
+    <verb>Refine</verb>
+    <gerund>Refining at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+      <li>Sight</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef> 
+  
+  
+      <WorkGiverDef>
+    <defName>DoBillsBrickMaker</defName>
+    <label>make bricks</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+      <li>BrickSpot</li>
+    </fixedBillGiverDefs>
+    <verb>Form bricks</verb>
+    <gerund>Forming bricks at at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+
+ </Defs>

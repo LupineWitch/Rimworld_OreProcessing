@@ -69,8 +69,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>MiningPlatform</defName>
     <label>Mining platform</label>
-    <description>A place for mining every ore one could imagine</description>
-    <thingClass>Building_WorkTable</thingClass>
+    <description>A place for mining basic ores and coal. Needs to be rebuilt after depletion.</description>
 	    <costList>
       <WoodLog>200</WoodLog>
     </costList>
@@ -87,10 +86,9 @@
       </damageData>
     </graphicData>
     <statBases>
-      <WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
-      <WorkToBuild>300</WorkToBuild>
+      <WorkToBuild>1000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
-      <Flammability>0.5</Flammability>
+      <Flammability>0.8</Flammability>
       <Cleanliness>-15</Cleanliness>
     </statBases>
     <scatterableOnMapGen>false</scatterableOnMapGen>
@@ -101,38 +99,42 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,0)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
     <building>
-      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
-	    <recipes>
-		<li>MineIronOre</li>
-		<li>MineGoldOre</li>
-		<li>MineCoalOre</li>
-		<li>MineSilverOre</li>
-		<li>MinePlasteelOre</li>
-		<li>MineUraniumOre</li>
-    </recipes>
     <comps>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>MiningCabinet</li>
-          <li>PoweredShaft</li>
-          <li>HandCrankOre</li>
-        </linkableFacilities>
-      </li>
-      <li>
-        <compClass>CompReportWorkSpeed</compClass>
-      </li>
-    </comps>
+	<li Class="oreprocessing.CompProperties_MineShaft">
+	 <mineableList>
+	 <li>
+	 <thingDef>ChunkIronOre</thingDef>
+	 <yield>20</yield>
+	 <workcapToMine>8000</workcapToMine>
+	 </li>
+
+	 <li>
+	 <thingDef>ChunkGoldOre</thingDef>
+	 <yield>20</yield>
+	 <workcapToMine>5500</workcapToMine>
+	 </li>
+	 
+	 
+	 <li>
+	 <thingDef>CoalOre</thingDef>
+	 <yield>25</yield>
+	 <workcapToMine>3000</workcapToMine>
+	 </li>
+
+
+	<li>
+	 <thingDef>ChunkSilverOre</thingDef>
+	 <yield>20</yield>
+	 <workcapToMine>5000</workcapToMine>
+	 </li>
+	 </mineableList>
+	 </li>
+	</comps>
     <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
-      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
      <li>oreprocessing.PlaceWorker_MiningNode</li>
     </placeWorkers>
   </ThingDef>
@@ -200,186 +202,15 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
+	<placeWorkers>
+	<li>PlaceWorker_ShowFacilitiesConnections</li>
+	</placeWorkers>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
 	<researchPrerequisites>
 	<li>AdvancedSmelting</li>
 	</researchPrerequisites>
-  </ThingDef>
-  
-  <!-- Skill and speed enhancing facilities -->
-  
-  
-  
-    <ThingDef ParentName="BuildingBase">
-    <defName>MiningCabinet</defName>
-    <label>mining cabinet</label>
-    <description>Increases work speed when placed near a mine. One mine can link to up to two mining cabinets.</description>
-    <graphicData>
-      <texPath>Things/Building/Misc/ToolCabinet</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,1)</drawSize>
-      <color>(96,114,95)</color>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-      </damageData>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.35</staticSunShadowHeight>
-    <fillPercent>0.5</fillPercent>
-    <canOverlapZones>false</canOverlapZones>
-    <pathCost>60</pathCost>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>1800</WorkToBuild>
-      <Mass>40</Mass>
-      <Flammability>0.5</Flammability>
-    </statBases>
-    <size>(2,1)</size>
-    <costList>
-      <Steel>200</Steel>
-	  <WoodLog>50</WoodLog>
-    </costList>
-    <researchPrerequisites>
-      <li>Mining1</li>
-    </researchPrerequisites>
-    <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <thingCategories>
-      <li>BuildingsMisc</li>
-    </thingCategories>
-    <comps>
-      <li Class="CompProperties_Facility">
-        <statOffsets>
-        <WorkTableWorkSpeedFactor>0.1</WorkTableWorkSpeedFactor>
-        </statOffsets>
-        <maxSimultaneous>2</maxSimultaneous>
-      </li>
-    </comps>
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
-  </ThingDef>
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>HandCrankOre</defName>
-    <label>Ore crusher</label>
-    <description>Increases yielded ore, but slows down mining process( Beacuse it has to be hand cranked</description>
-    <graphicData>
-      <texPath>Things/Buildings/OreCrusherHand</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,1)</drawSize>
-      <color>(96,114,95)</color>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-      </damageData>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.35</staticSunShadowHeight>
-    <fillPercent>0.5</fillPercent>
-    <canOverlapZones>false</canOverlapZones>
-    <pathCost>60</pathCost>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>1800</WorkToBuild>
-      <Mass>40</Mass>
-      <Flammability>0.5</Flammability>
-    </statBases>
-    <size>(2,1)</size>
-    <costList>
-      <Steel>80</Steel>
-	  <WoodLog>25</WoodLog>
-    </costList>
-    <researchPrerequisites>
-      <li>Mining1</li>
-    </researchPrerequisites>
-    <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <thingCategories>
-      <li>BuildingsMisc</li>
-    </thingCategories>
-    <comps>
-      <li Class="CompProperties_Facility">
-        <statOffsets>
-        <WorkTableWorkSpeedFactor>-0.15</WorkTableWorkSpeedFactor>
-		<WorkTableEfficiencyFactor>0.05</WorkTableEfficiencyFactor>
-        </statOffsets>
-        <maxSimultaneous>1</maxSimultaneous>
-      </li>
-    </comps>
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
-  </ThingDef>
-      
-	
-	<ThingDef ParentName="BuildingBase">
-    <defName>PoweredShaft</defName>
-    <label>powered mining shaft</label>
-    <description>When powered, increases mining speed, and output.(Rainproof)</description>
-    <graphicData>
-      <texPath>Things/Buildings/PoweredMiningShaft</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(4,4)</drawSize>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-      </damageData>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <canOverlapZones>false</canOverlapZones>
-    <pathCost>90</pathCost>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>1800</WorkToBuild>
-      <Mass>60</Mass>
-      <Flammability>0.5</Flammability>
-    </statBases>
-    <size>(2,2)</size>
-    <costList>
-      <Steel>200</Steel>
-	  <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
-    <researchPrerequisites>
-      <li>Mining2</li>
-    </researchPrerequisites>
-    <designationCategory>Misc</designationCategory>
-    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <comps>
-	      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>250</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Facility">
-        <statOffsets>
-        <WorkTableWorkSpeedFactor>0.33</WorkTableWorkSpeedFactor>
-		<WorkTableEfficiencyFactor>0.15</WorkTableEfficiencyFactor>
-        </statOffsets>
-        <maxSimultaneous>1</maxSimultaneous>
-      </li>
-    </comps>
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
-	<rotatable>false</rotatable>
   </ThingDef>
   
   

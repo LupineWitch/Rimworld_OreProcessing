@@ -9,7 +9,7 @@
     <label>mine iron ore</label>
     <description>I really have no idea how to better describe it.</description>
     <jobString>Mining iron ore</jobString>
-    <workAmount>2000</workAmount>
+    <workAmount>2250</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
 	<workSkill>Mining</workSkill>
 	<effectWorking>Mine</effectWorking>
@@ -50,7 +50,7 @@
     <label>mine coal</label>
     <description>I really have no idea how to better describe it.</description>
     <jobString>Mining coal</jobString>
-    <workAmount>1800</workAmount>
+    <workAmount>1850</workAmount>
     <workSpeedStat>MiningSpeed</workSpeedStat>
 		<efficiencyStat>MiningYield</efficiencyStat>
     <effectWorking>CutStone</effectWorking>
@@ -96,7 +96,7 @@
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkPlasteelOre>10</ChunkPlasteelOre>
+     <ChunkPlasteelOre>25</ChunkPlasteelOre>
     </products>
 	      <skillRequirements>
 			<Mining>15</Mining>
@@ -116,7 +116,7 @@
 	<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>	
     <products>
-     <ChunkUraniumOre>35</ChunkUraniumOre>
+     <ChunkUraniumOre>20</ChunkUraniumOre>
     </products>
       <skillRequirements>
 			<Mining>15</Mining>
