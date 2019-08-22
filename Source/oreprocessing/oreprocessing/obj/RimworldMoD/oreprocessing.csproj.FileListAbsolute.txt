@@ -1,0 +1,12 @@
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\oreprocessing.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\obj\RimworldMoD\oreprocessing.csproj.CoreCompileInputs.cache
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\obj\RimworldMoD\oreprocessing.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\Assembly-CSharp.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\UnityEngine.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\TextMeshPro-1.0.55.56.0b11.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\Assembly-CSharp-firstpass.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\NAudio.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\NVorbis.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\Assemblies\UnityEngine.UI.dll
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\obj\RimworldMoD\oreprocessing.csproj.CopyComplete
+D:\kodowanie\C#\sad\Source\oreprocessing\oreprocessing\obj\RimworldMoD\oreprocessing.csprojAssemblyReference.cache

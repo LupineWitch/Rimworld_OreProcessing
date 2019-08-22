@@ -67,6 +67,8 @@
     </comps>
 	<rotatable>true</rotatable>
     <building>
+	  <workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <heatPerTickWhileWorking>0.85</heatPerTickWhileWorking>
     </building>
@@ -145,6 +147,8 @@
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <heatPerTickWhileWorking>4</heatPerTickWhileWorking>
     </building>
+	  <workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
 	    <researchPrerequisites>
       <li>MedievalSmelting</li>
     </researchPrerequisites>
@@ -220,6 +224,8 @@
       </li>
     </comps>
     <building>
+	<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
     </building>

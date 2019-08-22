@@ -106,37 +106,7 @@
              <li>CoalOre</li>
        </value>
    </Operation>   
-   
-   
-      <Operation Class="PatchOperationAdd">
-       <xpath>*/ThingDef[defName = "FueledStove"]/comps/li[@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-       <value>
-             <li>CoalOre</li>
-       </value>
-   </Operation> 
-
-
-   <Operation Class="PatchOperationAdd">
-       <xpath>*/ThingDef[defName = "WoodFiredGenerator"]/comps/li[@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-       <value>
-             <li>CoalOre</li>
-       </value>
-   </Operation>  
-
-   <Operation Class="PatchOperationReplace">
-      <xpath>*/ThingDef[defName = "WoodFiredGenerator"]/description</xpath>
-      <value>
-         <description>Produces power by consuming wood fuel or coal. Must be fueled by hand.</description>   
-      </value>
-   </Operation>   
-   
-     <Operation Class="PatchOperationReplace">
-      <xpath>*/ThingDef[defName = "WoodFiredGenerator"]/label</xpath>
-      <value>
-         <label>fueled generator</label>   
-      </value>
-   </Operation>   
-  
+     
   <Operation Class="PatchOperationRemove">
     <xpath>*/ThingDef[defName = "Steel"]/deepCommonality</xpath>
 </Operation> 

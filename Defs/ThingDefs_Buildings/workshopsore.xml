@@ -70,9 +70,11 @@
     <defName>MiningPlatform</defName>
     <label>Mining platform</label>
     <description>A place for mining basic ores and coal. Needs to be rebuilt after depletion.</description>
-	    <costList>
-      <WoodLog>200</WoodLog>
-    </costList>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>200</costStuffCount>
+	<altitudeLayer>Building</altitudeLayer>
  	<graphicData>
       <texPath>Things/Buildings/MiningPlatform</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -86,7 +88,7 @@
       </damageData>
     </graphicData>
     <statBases>
-      <WorkToBuild>1000</WorkToBuild>
+      <WorkToBuild>9500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>0.8</Flammability>
       <Cleanliness>-15</Cleanliness>
@@ -106,32 +108,69 @@
     <comps>
 	<li Class="CompProperties_Forbiddable"/>
 	<li Class="oreprocessing.CompProperties_MineShaft">
+	
 	 <mineableList>
 	 <li>
+	 <depletionRate>5</depletionRate>
 	 <thingDef>ChunkIronOre</thingDef>
 	 <yield>20</yield>
 	 <workcapToMine>8000</workcapToMine>
-	 </li>
+	 <chance>100</chance>
+	 </li>	
 
 	 <li>
-	 <thingDef>ChunkGoldOre</thingDef>
-	 <yield>20</yield>
-	 <workcapToMine>5500</workcapToMine>
-	 </li>
-	 
-	 
-	 <li>
+	 <depletionRate>2.5</depletionRate>
 	 <thingDef>CoalOre</thingDef>
 	 <yield>25</yield>
 	 <workcapToMine>3000</workcapToMine>
+	 <chance>100</chance>
 	 </li>
+
+
+	 <li>
+	 <depletionRate>10</depletionRate>
+	 <thingDef>ChunkGoldOre</thingDef>
+	 <yield>20</yield>
+	 <workcapToMine>5500</workcapToMine>
+	 <chance>50</chance>
+	 </li>
+	 
+	 
 
 
 	<li>
+	<depletionRate>8</depletionRate>
 	 <thingDef>ChunkSilverOre</thingDef>
 	 <yield>20</yield>
 	 <workcapToMine>5000</workcapToMine>
+	 <chance>70</chance>
 	 </li>
+
+	 
+	<li>
+	<depletionRate>15</depletionRate>
+	 <thingDef>Jade</thingDef>
+	 <yield>15</yield>
+	 <workcapToMine>8000</workcapToMine>
+	 <chance>60</chance>
+	 </li>
+
+	 <li>
+	<depletionRate>20</depletionRate>
+	 <thingDef>ChunkUraniumOre</thingDef>
+	 <yield>10</yield>
+	 <workcapToMine>9000</workcapToMine>
+	 <chance>20</chance>
+	 </li>
+
+	 <li>
+	<depletionRate>15</depletionRate>
+	 <thingDef>ChunkPlasteelOre</thingDef>
+	 <yield>20</yield>
+	 <workcapToMine>8500</workcapToMine>
+	 <chance>20</chance>
+	 </li>
+	 
 	 </mineableList>
 	 </li>
 	</comps>
@@ -212,6 +251,77 @@
 	<researchPrerequisites>
 	<li>AdvancedSmelting</li>
 	</researchPrerequisites>
+  </ThingDef>
+  
+  
+    <ThingDef ParentName="BuildingBase">
+    <defName>CoalFiredGenerator</defName>
+    <label>Coal-fired generator</label>
+    <description>Produces power by consuming coal. Must be periodically loaded with coal fuel by hand.(Added by oreprocessing)</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Power/WoodFiredGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-1000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>18.0</fuelConsumptionRate>
+        <fuelCapacity>75.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>CoalOre</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>6</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
   </ThingDef>
   
   
